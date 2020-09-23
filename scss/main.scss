@@ -2,6 +2,11 @@
 @import "menus";
 // Global
 
+*{
+  overflow: hidden !importnat;
+}
+  
+
 *,
 *::before,
 *::after {
