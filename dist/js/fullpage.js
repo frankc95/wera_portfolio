@@ -2,7 +2,7 @@ new fullpage("#myPage", {
   menu: "#menu",
   autoScrolling: true,
   navigation: true,
-  scrollBar: true,
+//   scrollBar: true,
   scrollOverflow: true,
   anchors: [
     "home",
