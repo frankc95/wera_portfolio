@@ -11,6 +11,10 @@
   text-decoration: none;
 }
 
+html.fp-enabled {
+    overflow: hidden !important;
+}
+
 body {
   font-family: "Noto Sans JP", sans-serif;
   line-height: 1.6;
