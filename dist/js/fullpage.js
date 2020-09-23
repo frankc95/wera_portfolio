@@ -1,6 +1,6 @@
 new fullpage("#myPage", {
   menu: "#menu",
-  autoScrolling: false,
+  autoScrolling: true,
   navigation: true,
   scrollBar: true,
   anchors: [
