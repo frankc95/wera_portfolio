@@ -3,7 +3,6 @@ new fullpage("#myPage", {
   autoScrolling: true,
   navigation: true,
   scrollBar: true,
-  scrollOverflow: false,
   anchors: [
     "home",
     "education",
