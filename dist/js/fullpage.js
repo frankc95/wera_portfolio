@@ -2,7 +2,7 @@ new fullpage("#myPage", {
   menu: "#menu",
   autoScrolling: true,
   navigation: true,
-  scrollBar: false,
+  scrollBar: true,
   anchors: [
     "home",
     "education",
