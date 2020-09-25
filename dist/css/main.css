@@ -73,6 +73,7 @@ nav.mobile-nav .menu-nav {
 
 nav.mobile-nav .menu-nav.show {
   transform: translate3d(0, 0, 0);
+  padding: 0;
 }
 
 nav.mobile-nav .menu-branding {
@@ -388,6 +389,7 @@ footer .footer-link {
   position: fixed;
   bottom: 25px;
   right: 50%;
+  transform: translateX(50%);
   z-index: 1;
 }
 
@@ -453,6 +455,15 @@ footer .footer-right a:hover, footer .footer-right a:focus {
 }
 
 @media screen and (max-width: 768px) {
+  nav.mobile-nav .menu-nav .nav-item i {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+  nav.side-nav {
+    display: none;
+  }
   main section .section-wrapper .big-faded {
     line-height: 7rem;
     transform: scale(1);
@@ -473,10 +484,10 @@ footer .footer-right a:hover, footer .footer-right a:focus {
   main section .section-wrapper .bio-wrapper .bio-image {
     justify-content: center;
   }
-  .menu-btn {
-    display: block;
+  footer .footer-right a {
+    margin: 0.2em;
   }
-  nav.side-nav {
-    display: none;
+  footer .footer-right i {
+    font-size: 1.2rem;
   }
 }
