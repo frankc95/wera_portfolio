@@ -78,6 +78,26 @@
   }
 }
 
+// nav {
+//   &.mobile-nav {
+//     height: 100vh;
+//     .menu {
+//       &-branding,
+//       &-nav {
+//         height: 50%;
+//         width: 100vw;
+//       }
+
+//       &-nav {
+//         .nav-link {
+//           font-size: 1rem;
+//           padding: 0.5rem 0;
+//         }
+//       }
+//     }
+//   }
+// }
+
 // Smartphones
 @include mediaSm {
 }
