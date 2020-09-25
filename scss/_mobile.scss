@@ -38,6 +38,26 @@
 
 // Tablets & Small Laptops
 @include mediaMd {
+  nav {
+    &.mobile-nav {
+      .menu {
+        &-nav {
+          .nav-item i {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  nav.side-nav {
+    display: none;
+  }
+
   main {
     section {
       .section-wrapper {
@@ -69,22 +89,13 @@
     }
   }
 
-  .menu-btn {
-    display: block;
-  }
-
-  nav.side-nav {
-    display: none;
-  }
-}
-
-nav {
-  &.mobile-nav {
-    .menu {
-      &-nav {
-        .nav-item i {
-          display: none;
-        }
+  footer {
+    .footer-right {
+      & a {
+        margin: 0.2em;
+      }
+      & i {
+        font-size: 1.2rem;
       }
     }
   }

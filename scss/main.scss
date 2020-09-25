@@ -208,12 +208,14 @@ main {
   }
 }
 
+// FOOTER
 footer {
   .footer-link {
     display: block;
     position: fixed;
     bottom: 25px;
     right: 50%;
+    transform: translateX(50%);
     z-index: 1;
   }
   .footer-right {
