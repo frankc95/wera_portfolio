@@ -10,11 +10,10 @@ new fullpage("#myPage", {
     "experience",
     "volunteer",
     "contact",
+    "home",
   ],
 });
 
-const goDown = document.getElementById("goDown");
-
-goDown.addEventListener("click", function () {
+document.getElementById("goDown").addEventListener("click", function () {
   fullpage_api.moveSectionDown();
 });
