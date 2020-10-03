@@ -667,6 +667,9 @@ footer .footer-right a:hover, footer .footer-right a:focus {
   main section .section-wrapper .card-img--hover {
     height: 100px;
   }
+  footer .footer-link {
+    display: none;
+  }
   footer .footer-right a {
     margin: 0.2em;
   }

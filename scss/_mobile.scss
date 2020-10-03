@@ -123,6 +123,9 @@
   }
 
   footer {
+    .footer-link {
+      display: none;
+    }
     .footer-right {
       & a {
         margin: 0.2em;
