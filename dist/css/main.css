@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 nav.side-nav {
   display: block;
   position: fixed;
@@ -45,7 +47,7 @@ nav.mobile-nav {
   top: 0;
   width: 100%;
   height: 100vh;
-  opacity: 0.95;
+  opacity: 0.99;
   visibility: hidden;
   z-index: 2;
 }
@@ -196,6 +198,106 @@ nav .nav-item:nth-child(6) {
   z-index: 1 !important;
 }
 
+.cards {
+  font-family: "Roboto Slab", serif;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.card .card-img,
+.card .card-img--hover {
+  background: url(https://oio.pg.edu.pl/documents/213090/0/Schowek02.jpg?t=1510051348859) center/cover no-repeat;
+}
+
+.card-img {
+  visibility: hidden;
+  width: 100%;
+  height: 265px;
+  border-radius: 10px;
+}
+
+.card-info-hover {
+  position: absolute;
+  padding: 16px;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+}
+
+.card-img--hover {
+  transition: 0.2s all ease-out;
+  width: 100%;
+  position: absolute;
+  height: 265px;
+  top: 0;
+}
+
+.card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  transform: translate3d(0, 0px, 0);
+}
+
+.card:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1, 1.1);
+}
+
+.card-info {
+  z-index: 2;
+  background-color: rgba(0, 217, 255, 0.9);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 16px 24px 24px 24px;
+}
+
+.card-category {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card-title {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-family: "Roboto Slab", serif;
+}
+
+.card-author {
+  font-weight: 600;
+  text-decoration: none;
+  color: #ad7d52;
+}
+
+.card:hover .card-img--hover {
+  height: 100%;
+  opacity: 1;
+}
+
+.card:hover .card-info {
+  background-color: transparent;
+  position: relative;
+}
+
+.card:hover .card-info-hover {
+  opacity: 1;
+}
+
+.card:hover .card-category,
+.card:hover .card-author,
+.card:hover .card-title {
+  display: none;
+}
+
 *,
 *::before,
 *::after {
@@ -303,11 +405,10 @@ main .img-cover:after {
 
 main section .section-wrapper {
   width: 100%;
-  max-width: 1100px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 150px;
   margin: 0 auto;
   transition-delay: 0.3s;
+  max-width: 1100px;
 }
 
 main section .section-wrapper .bio-wrapper {
@@ -390,16 +491,23 @@ main section .section-wrapper .secondary-title {
 }
 
 footer .footer-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   position: fixed;
-  bottom: 25px;
+  bottom: 10px;
   right: 50%;
   transform: translateX(50%);
   z-index: 1;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  height: 30px;
+  width: 15px;
+  cursor: pointer;
 }
 
-footer .footer-link i {
-  color: #fff;
+footer .footer-link a {
+  text-align: center;
 }
 
 @keyframes bounce {
@@ -411,15 +519,20 @@ footer .footer-link i {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-30px);
+    transform: translateY(-10px);
   }
   60% {
-    transform: translateY(-15px);
+    transform: translateY(-5px);
   }
 }
 
 footer .footer-link .bounce {
-  animation: bounce 3s infinite;
+  animation: bounce 2s infinite;
+  border-radius: 50%;
+  height: 5px;
+  width: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: inline-block;
 }
 
 footer .footer-right {

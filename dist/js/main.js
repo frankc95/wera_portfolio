@@ -7,6 +7,9 @@ const menuNav = document.querySelector(".menu-nav");
 
 const navItems = document.querySelectorAll(".nav-item");
 
+const section = document.getElementById("education");
+const cards = document.querySelectorAll(".card");
+
 //Set Initial State Of Menu
 let showMenu = false;
 
