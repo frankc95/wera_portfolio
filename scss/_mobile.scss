@@ -31,6 +31,10 @@
             justify-content: center;
           }
         }
+
+        .cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
     }
   }
@@ -60,7 +64,17 @@
 
   main {
     section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+
+      .icon {
+        display: none;
+      }
+
       .section-wrapper {
+        padding: 0;
         .big-faded {
           line-height: 7rem;
           transform: scale(1);
@@ -84,6 +98,22 @@
           .bio-image {
             justify-content: center;
           }
+        }
+
+        .cards {
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 10px;
+
+          &:hover {
+            display: none;
+          }
+        }
+
+        .card-img {
+          height: 100px;
+        }
+        .card-img--hover {
+          height: 100px;
         }
       }
     }

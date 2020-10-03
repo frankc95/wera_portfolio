@@ -319,12 +319,12 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   line-height: 1.6;
   height: 100%;
-  overflow: hidden !important;
+  overflow-x: hidden !important;
   background-color: #031220;
 }
 
 .container {
-  width: 85%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -403,9 +403,19 @@ main .img-cover:after {
   z-index: -2;
 }
 
+main section .icon {
+  display: inline-block;
+  position: fixed;
+  color: rgba(255, 255, 255, 0.1);
+  font-size: 40vw;
+  top: 15%;
+  left: 50%;
+  transform: translatex(-45%);
+}
+
 main section .section-wrapper {
   width: 100%;
-  padding-left: 150px;
+  padding-left: 100px;
   margin: 0 auto;
   transition-delay: 0.3s;
   max-width: 1100px;
@@ -594,6 +604,9 @@ footer .footer-right a:hover, footer .footer-right a:focus {
   main section .section-wrapper .bio-wrapper .bio-image {
     justify-content: center;
   }
+  main section .section-wrapper .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -605,6 +618,18 @@ footer .footer-right a:hover, footer .footer-right a:focus {
   }
   nav.side-nav {
     display: none;
+  }
+  main section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  main section .icon {
+    display: none;
+  }
+  main section .section-wrapper {
+    padding: 0;
   }
   main section .section-wrapper .big-faded {
     line-height: 7rem;
@@ -625,6 +650,19 @@ footer .footer-right a:hover, footer .footer-right a:focus {
   }
   main section .section-wrapper .bio-wrapper .bio-image {
     justify-content: center;
+  }
+  main section .section-wrapper .cards {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+  main section .section-wrapper .cards:hover {
+    display: none;
+  }
+  main section .section-wrapper .card-img {
+    height: 100px;
+  }
+  main section .section-wrapper .card-img--hover {
+    height: 100px;
   }
   footer .footer-right a {
     margin: 0.2em;

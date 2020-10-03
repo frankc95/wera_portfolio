@@ -64,7 +64,7 @@
               <a class="nav-link" href="#home" target="_top"><i class="fas fa-door-open"></i>home</a>
             </li>
             <li class="nav-item" data-menuanchor="education">
-              <a class="nav-link" href="#education" target="_top"><i class="fas fa-graduation-cap"></i></i>education</a>
+              <a class="nav-link" href="#education" target="_top"><i class="fas fa-graduation-cap"></i>education</a>
             </li>
             <li class="nav-item" data-menuanchor="licenses">
               <a class="nav-link" href="#licenses"><i class="fas fa-id-badge"></i>licenses</a>
@@ -86,7 +86,7 @@
 
     <main id="myPage">
       <div class="img-cover"></div>
-        <section class="container">
+        <div class="container">
           <!-- HOME -->
           <section class="section home">
             <div class="section-wrapper home" data-aos="fade-up">
@@ -105,8 +105,8 @@
           </section>
           <!-- EDUCATION -->
           <section class="section education" data-aos="fade-up">
+            <i class="fas fa-graduation-cap icon"></i>
             <div class="section-wrapper">
-
               <!-- CARDS -->
               <div class="cards">
                 <article class="card card--1">
@@ -225,7 +225,7 @@
               
             </div>  
           </section>
-        </section>
+        </div>
 
         <!-- FOOTER -->
         <footer>
@@ -251,7 +251,11 @@
       crossorigin="anonymous"
     ></script>
     <script src="/dist/js/main.js"></script>
-    <script src="dist/js/fullpage.js"></script>
+    <script>
+      if (screen && screen.width > 768) {
+      document.write('<script src="dist/js/fullpage.js"><\/script>');
+      }
+      </script>
     <script>
       AOS.init({
         offset: 400,
