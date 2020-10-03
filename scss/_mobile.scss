@@ -42,6 +42,9 @@
 
 // Tablets & Small Laptops
 @include mediaMd {
+  html {
+    scroll-behavior: smooth;
+  }
   nav {
     &.mobile-nav {
       .menu {

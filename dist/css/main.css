@@ -610,6 +610,9 @@ footer .footer-right a:hover, footer .footer-right a:focus {
 }
 
 @media screen and (max-width: 768px) {
+  html {
+    scroll-behavior: smooth;
+  }
   nav.mobile-nav .menu-nav .nav-item i {
     display: none;
   }
