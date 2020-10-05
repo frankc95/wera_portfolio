@@ -1,6 +1,8 @@
 @import "config";
 @import "menus";
-@import "cards";
+// @import "cards";
+@import "cards1";
+
 // Global
 
 *,
@@ -29,7 +31,7 @@ body {
 }
 
 .container {
-  width: 80%;
+  // width: 80%;
   margin: 0 auto;
 }
 
