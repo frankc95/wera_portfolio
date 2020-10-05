@@ -37,6 +37,7 @@
         }
 
         .row {
+          max-width: 600px;
           & ul {
             grid-template-columns: repeat(2, 1fr);
           }
@@ -123,7 +124,7 @@
           }
 
           & img {
-            width: 100%;
+            width: 80%;
           }
         }
 

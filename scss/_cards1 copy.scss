@@ -45,7 +45,6 @@
   width: 100%;
   height: 100vh;
   top: 0;
-  left: 0;
   padding-top: 100px;
   background: #ffffff;
   background-color: #fafafa;
@@ -68,6 +67,7 @@
     width: 50%;
     max-height: 100%;
     padding: 0 40px 40px;
+    overflow: auto;
   }
 
   & h1 {
