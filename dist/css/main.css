@@ -249,10 +249,14 @@ nav .nav-item:nth-child(6) {
   z-index: 2;
   background: white;
   display: flex;
+  transform: translateY(-100%);
+  transition: all 0.5s ease-in-out;
 }
 
 .port.item_open {
   visibility: visible;
+  transform: translateY(0);
+  transition: all 0.4s ease-in-out;
 }
 
 .port .port .port > * {
