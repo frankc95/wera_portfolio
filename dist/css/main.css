@@ -2,7 +2,7 @@ nav.side-nav {
   display: block;
   position: fixed;
   top: 50%;
-  left: 64px;
+  left: 25px;
   transform: translateY(-50%);
   text-transform: uppercase;
   z-index: 1;
@@ -200,12 +200,14 @@ nav .nav-item:nth-child(6) {
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .row ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
+  padding: 0;
 }
 
 .row ul li {
@@ -234,74 +236,67 @@ nav .nav-item:nth-child(6) {
   height: 100%;
   background: no-repeat top;
   object-fit: cover;
-  width: 100%;
   max-height: 100%;
 }
 
 .port {
   position: fixed;
+  top: 0;
   width: 100%;
   height: 100vh;
-  top: 0;
-  left: 0;
-  padding-top: 100px;
-  background: #ffffff;
-  background-color: #fafafa;
-  z-index: 2;
+  opacity: 0.99;
   visibility: hidden;
-  transform: translateY(-100%);
-  border-bottom: 1px solid #d0d0d0;
-  transition: all 0.5s ease-in-out;
-  overflow: hidden;
-}
-
-.port img {
-  width: 50%;
-}
-
-.port .description {
-  float: left;
-  width: 50%;
-  max-height: 100%;
-  padding: 0 40px 40px;
-}
-
-.port h1 {
-  font-size: 35px;
-  line-height: 2.3;
-  padding: 0;
-}
-
-.port .port .port > * {
-  opacity: 0;
-  transition: all 0.5s linear;
+  z-index: 2;
+  background: white;
+  display: flex;
 }
 
 .port.item_open {
   visibility: visible;
-  transform: translateY(0%);
-  transition: all 0.4s ease-in-out;
 }
 
-.port > * {
-  opacity: 1;
-  transition-delay: 0.5s;
+.port .port .port > * {
+  opacity: 0;
 }
 
-.close {
+.port .row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+}
+
+.port .row .description {
+  width: 50%;
+  height: 100vh;
+  padding: 0 40px 40px;
+}
+
+.port .row .branding {
+  width: 50%;
+  height: 100vh;
+  text-align: center;
+}
+
+.port .row .branding img {
+  max-width: 80%;
+}
+
+.closee {
   width: 21px;
   height: 21px;
   background: url(data:image/svg+xml;utf8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2017.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0A%3Csvg%20version%3D%221.1%22%0A%09%20id%3D%22svg2%22%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%09%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2021%2021%22%0A%09%20enable-background%3D%22new%200%200%2021%2021%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cg%20id%3D%22layer1%22%20transform%3D%22translate%280%2C-1031.3622%29%22%3E%0A%09%3Cpath%20id%3D%22path2987%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20d%3D%22M0%2C1031.4l21%2C21%22/%3E%0A%09%3Cpath%20id%3D%22path2989%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20d%3D%22M21%2C1031.4l-21%2C21%22/%3E%0A%3C/g%3E%0A%3C/svg%3E%0A%0A) no-repeat;
   position: fixed;
-  opacity: 1;
-  z-index: 4;
+  opacity: 0;
+  z-index: 5;
   transition: all 0.1s ease-in-out;
   visibility: hidden;
   top: 40px;
   right: 40px;
 }
 
-.item_open .close {
+.closee.item_open {
   opacity: 1;
   top: 40px;
   right: 40px;
@@ -425,10 +420,12 @@ main section .icon {
 
 main section .section-wrapper {
   width: 100%;
-  padding-left: 100px;
   margin: 0 auto;
   transition-delay: 0.3s;
-  max-width: 1100px;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main section .section-wrapper .bio-wrapper {
@@ -670,18 +667,12 @@ footer .footer-right a:hover, footer .footer-right a:focus {
   main section .section-wrapper .bio-wrapper .bio-image {
     justify-content: center;
   }
+  main section .section-wrapper .row {
+    flex-flow: column nowrap;
+  }
   main section .section-wrapper .row ul {
     grid-template-columns: repeat(2, 1fr);
     padding-left: 0;
-  }
-  main section .section-wrapper .port {
-    padding: 0;
-  }
-  main section .section-wrapper .port .description {
-    width: 100%;
-  }
-  main section .section-wrapper .port img {
-    width: 80%;
   }
   main section .section-wrapper .cards {
     grid-template-columns: repeat(1, 1fr);
@@ -695,6 +686,19 @@ footer .footer-right a:hover, footer .footer-right a:focus {
   }
   main section .section-wrapper .card-img--hover {
     height: 100px;
+  }
+  .port .row {
+    flex-flow: column nowrap;
+    padding-top: 0px;
+  }
+  .port .row .description {
+    width: 100%;
+    height: 40vh;
+    padding: 40px;
+  }
+  .port .row .branding {
+    width: 100%;
+    height: 60vh;
   }
   footer .footer-link {
     display: none;

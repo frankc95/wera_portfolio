@@ -111,20 +111,11 @@
         }
 
         .row {
+          flex-flow: column nowrap;
+
           & ul {
             grid-template-columns: repeat(2, 1fr);
             padding-left: 0;
-          }
-        }
-
-        .port {
-          padding: 0;
-          & .description {
-            width: 100%;
-          }
-
-          & img {
-            width: 80%;
           }
         }
 
@@ -143,6 +134,24 @@
         .card-img--hover {
           height: 100px;
         }
+      }
+    }
+  }
+
+  .port {
+    & .row {
+      flex-flow: column nowrap;
+      padding-top: 0px;
+
+      & .description {
+        width: 100%;
+        height: 40vh;
+        padding: 40px;
+      }
+
+      & .branding {
+        width: 100%;
+        height: 60vh;
       }
     }
   }
