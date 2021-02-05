@@ -855,8 +855,8 @@ footer .footer-right a:hover, footer .footer-right a:focus {
   .port {
     top: 0vh;
     left: 0vw;
-    width: 105vw;
-    height: 105vh;
+    width: 100vw;
+    height: 100vh;
   }
   .port .row .branding {
     height: 50%;
