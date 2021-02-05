@@ -6,34 +6,33 @@
 
   & ul {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     padding: 0;
+    opacity: 0.85;
 
     & li {
       position: relative;
-      height: 200px;
+      max-height: 300px;
 
       & a {
         height: 100%;
 
         &:hover::before {
-          content: "";
+          content: '';
           position: absolute;
           top: 0;
           left: 0;
           height: 100%;
           width: 100%;
           background: rgba(0, 0, 0, 0.4);
-          margin: 0;
-          padding: 0;
         }
 
         & img {
           width: 100%;
           height: 100%;
-          background: no-repeat top;
-          object-fit: cover;
+          background: white no-repeat top;
+          object-fit: scale-down;
           max-height: 100%;
         }
       }
@@ -43,14 +42,16 @@
 
 .port {
   position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  opacity: 0.99;
+  top: 20vh;
+  left: 15vw;
+  width: 70vw;
+  height: 60vh;
   visibility: hidden;
-  z-index: 2;
-  background: white;
+  z-index: 4;
+  background: #182558;
   display: flex;
+  overflow: hidden;
+  box-sizing: border-box;
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
   -webkit-transition: all 0.5s ease-in-out;
@@ -72,43 +73,95 @@
 
   & .row {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 100px;
-
-    & .description {
-      width: 50%;
-      height: 100vh;
-      padding: 0 40px 40px;
-    }
+    box-sizing: border-box;
 
     & .branding {
-      width: 50%;
-      height: 100vh;
-      text-align: center;
+      width: 100%;
+      height: 60%;
+      text-align: left;
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        width: 100%;
+      }
+
+      &-img {
+        text-align: center;
+      }
+
+      &-text {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        color: #ffffff;
+        font-size: clamp(1rem, calc(1vw + 1rem), 2rem);
+
+        h1 {
+          color: #ff6e4f;
+        }
+
+        p:nth-child(3) {
+          font-size: 20px;
+        }
+      }
 
       & img {
-        max-width: 80%;
+        height: 400px;
+        width: 400px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.75);
+        object-fit: contain;
+        background: white;
+      }
+    }
+
+    & .description {
+      width: 100%;
+      height: 40%;
+      display: flex;
+      align-items: center;
+
+      &-wrap {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 15px;
+        padding: 0 100px 40px;
+        width: 100%;
+
+        .inner {
+          margin: 10px;
+        }
+      }
+
+      & h2 {
+        color: #ff6e4f;
+        margin-bottom: 5px;
+      }
+
+      & p {
+        color: #ffffff;
       }
     }
   }
 }
 
 .closee {
-  width: 21px;
-  height: 21px;
+  width: 30px;
+  height: 30px;
   background: url(data:image/svg+xml;utf8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2017.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0A%3Csvg%20version%3D%221.1%22%0A%09%20id%3D%22svg2%22%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%20xmlns%3Acc%3D%22http%3A//creativecommons.org/ns%23%22%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%20xmlns%3Asvg%3D%22http%3A//www.w3.org/2000/svg%22%0A%09%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2021%2021%22%0A%09%20enable-background%3D%22new%200%200%2021%2021%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cg%20id%3D%22layer1%22%20transform%3D%22translate%280%2C-1031.3622%29%22%3E%0A%09%3Cpath%20id%3D%22path2987%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20d%3D%22M0%2C1031.4l21%2C21%22/%3E%0A%09%3Cpath%20id%3D%22path2989%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20d%3D%22M21%2C1031.4l-21%2C21%22/%3E%0A%3C/g%3E%0A%3C/svg%3E%0A%0A)
     no-repeat;
+  filter: invert(1);
   position: fixed;
-  opacity: 0;
   z-index: 5;
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-  visibility: hidden;
-  top: 40px;
-  right: 40px;
 
   &.item_open {
     opacity: 1;
