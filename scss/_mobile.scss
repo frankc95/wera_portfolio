@@ -279,7 +279,7 @@
 
     & .row {
       & .branding {
-        height: 60%;
+        height: 50%;
         margin-top: 20px;
 
         &-wrap {
@@ -300,13 +300,13 @@
         }
 
         & img {
-          height: 160px;
-          width: 160px;
+          height: 150px;
+          width: 150px;
         }
       }
 
       & .description {
-        height: 40%;
+        height: 50%;
         &-wrap {
           padding: 0 0px 5px;
           grid-template-columns: repeat(2, 1fr);
