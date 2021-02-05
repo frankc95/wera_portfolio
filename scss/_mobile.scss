@@ -274,19 +274,20 @@
   .port {
     top: 0vh;
     left: 0vw;
-    width: 100vw;
-    height: 100vh;
+    width: 105vw;
+    height: 105vh;
 
     & .row {
       & .branding {
-        height: 50%;
+        height: 60%;
+        margin-top: 20px;
 
         &-wrap {
           grid-template-columns: 1fr;
         }
 
         &-text {
-          font-size: 20px;
+          font-size: 16px;
           text-align: center;
 
           .inner {
@@ -294,28 +295,31 @@
           }
 
           p:nth-child(3) {
-            font-size: 15px;
+            font-size: 13px;
           }
         }
 
         & img {
-          height: 200px;
-          width: 200px;
+          height: 160px;
+          width: 160px;
         }
       }
 
       & .description {
-        height: 50%;
+        height: 40%;
         &-wrap {
           padding: 0 0px 5px;
           grid-template-columns: repeat(2, 1fr);
           grid-gap: 5px;
 
           .inner {
-            padding-left: 15%;
+            padding-left: 15px;
 
             h2 {
-              font-size: 18px;
+              font-size: 16px;
+            }
+            p {
+              font-size: 12px;
             }
           }
         }
