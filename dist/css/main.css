@@ -859,7 +859,7 @@ footer .footer-right a:hover, footer .footer-right a:focus {
     height: 105vh;
   }
   .port .row .branding {
-    height: 60%;
+    height: 50%;
     margin-top: 20px;
   }
   .port .row .branding-wrap {
@@ -876,11 +876,11 @@ footer .footer-right a:hover, footer .footer-right a:focus {
     font-size: 13px;
   }
   .port .row .branding img {
-    height: 160px;
-    width: 160px;
+    height: 150px;
+    width: 150px;
   }
   .port .row .description {
-    height: 40%;
+    height: 50%;
   }
   .port .row .description-wrap {
     padding: 0 0px 5px;
