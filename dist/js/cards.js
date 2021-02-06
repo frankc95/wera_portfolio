@@ -8,6 +8,7 @@ $('.card ul li a').click(function () {
   $(itemID).addClass('item_open');
   return false;
 });
+
 $('.closee').click(function () {
   $('.port, .card ul, .closee').removeClass('item_open');
   $('.menu-btn').removeClass('bt-none');
