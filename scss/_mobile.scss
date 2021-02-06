@@ -22,6 +22,7 @@
   main {
     section {
       .section-wrapper {
+        transform: translatey(0);
         .big-faded {
           line-height: 8rem;
           transform: scale(1);
@@ -72,27 +73,13 @@
 
     & .row {
       & .branding {
-        height: 40%;
-        &-text {
-          font-size: 25px;
-
-          p:nth-child(3) {
-            font-size: 15px;
-          }
-        }
-
-        & img {
-          height: 300px;
-          width: 300px;
-        }
+        padding: 0;
       }
 
       & .description {
         &-wrap {
-          grid-template-columns: repeat(2, 1fr);
-
           .inner {
-            padding-left: 20%;
+            padding: 0;
           }
         }
       }
@@ -199,29 +186,33 @@
     height: 90vh;
 
     & .row {
+      h1 {
+        font-size: 26px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
       & .branding {
-        height: 40%;
-        &-text {
-          font-size: 20px;
+        padding: 0;
 
-          p:nth-child(3) {
-            font-size: 15px;
+        &-wrap {
+          padding: 0 20px;
+          align-items: center;
+
+          & h1 {
+            font-size: 40px;
           }
-        }
-
-        & img {
-          height: 250px;
-          width: 250px;
         }
       }
 
       & .description {
         &-wrap {
-          padding: 0 50px 40px;
-          grid-template-columns: repeat(2, 1fr);
+          padding: 0 20px;
 
           .inner {
-            padding-left: 20%;
+            padding: 0;
           }
         }
       }
@@ -276,51 +267,56 @@
     left: 0vw;
     width: 100vw;
     height: 100vh;
+    border-radius: 0;
 
     & .row {
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: none;
+
+      h1 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
       & .branding {
-        height: 50%;
-        margin-top: 20px;
+        display: flex;
+        order: 1;
 
         &-wrap {
-          grid-template-columns: 1fr;
-        }
+          padding: 0 10px;
+          justify-content: space-evenly;
 
-        &-text {
-          font-size: 16px;
-          text-align: center;
-
-          .inner {
-            width: 100%;
+          & .inner {
+            align-self: flex-start;
+            margin-left: 10px;
           }
 
-          p:nth-child(3) {
-            font-size: 13px;
+          & h1 {
+            font-size: 22px;
           }
         }
 
         & img {
           height: 150px;
-          width: 150px;
+          width: auto;
+          // box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.75);
+          object-fit: contain;
+          filter: grayscale(100%) invert(1) opacity(0.5);
         }
       }
 
       & .description {
-        height: 50%;
+        order: 2;
+
         &-wrap {
-          padding: 0 0px 5px;
-          grid-template-columns: repeat(2, 1fr);
           grid-gap: 5px;
+          padding: 0 10px;
 
           .inner {
-            padding-left: 15px;
-
-            h2 {
-              font-size: 16px;
-            }
-            p {
-              font-size: 12px;
-            }
+            margin: 0 0 0 10px;
           }
         }
       }

@@ -144,20 +144,6 @@
         justify-content: flex-end;
       }
 
-      &-text {
-        color: #ffffff;
-        // font-size: clamp(1rem, calc(1vw + 1rem), 2rem);
-        font-size: 18px;
-
-        h1 {
-          font-size: 35px;
-        }
-
-        p:nth-child(3) {
-          font-size: 20px;
-        }
-      }
-
       & img {
         height: 300px;
         width: auto;
