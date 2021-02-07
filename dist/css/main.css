@@ -225,6 +225,7 @@ nav .nav-item:nth-child(6) {
   padding-bottom: 5px;
   color: #000000;
   border-radius: 10px;
+  height: 100%;
 }
 
 .row ul li .card-container .img-container {
@@ -394,10 +395,186 @@ nav .nav-item:nth-child(6) {
   visibility: visible;
 }
 
+.process-wrapper {
+  margin: auto;
+  max-width: 1080px;
+}
+
+.process-wrapper #progress-bar-container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  height: 100px;
+  margin-top: 65px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+}
+
+.process-wrapper #progress-bar-container ul {
+  padding: 0;
+  margin: 0;
+  padding-top: 15px;
+  z-index: 9999;
+  position: absolute;
+  width: 100%;
+  margin-top: -40px;
+}
+
+.process-wrapper #progress-bar-container li {
+  list-style: none;
+  float: left;
+  width: 20%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  font-size: 11px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all ease 0.2s;
+  vertical-align: bottom;
+  height: 60px;
+  position: relative;
+}
+
+.process-wrapper #progress-bar-container li:before {
+  content: '';
+  display: block;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  transition: all ease 0.3s;
+}
+
+.process-wrapper #progress-bar-container li.active, .process-wrapper #progress-bar-container li:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.process-wrapper #progress-bar-container li:after {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: #5672ff;
+  background: rgba(255, 115, 85, 0.8);
+  margin: auto;
+  border: solid 7px rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  margin-top: 40px;
+  box-shadow: 0 2px 13px -1px rgba(0, 0, 0, 0.3);
+  transition: all ease 0.2s;
+}
+
+.process-wrapper #progress-bar-container li:hover:after {
+  background: #ff7355;
+}
+
+.process-wrapper #progress-bar-container li.active:after {
+  background: #ff7355;
+}
+
+.process-wrapper #progress-bar-container li.active::before, .process-wrapper #progress-bar-container li:hover:before {
+  border: solid 2px rgba(255, 255, 255, 0.9);
+  background: #ff7355;
+}
+
+.process-wrapper #progress-bar-container li .step-inner {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-size: 14px;
+}
+
+.process-wrapper #progress-bar-container #line {
+  width: 80%;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.9);
+  height: 6px;
+  position: absolute;
+  left: 10%;
+  top: 57px;
+  z-index: 1;
+  border-radius: 50px;
+  transition: all ease 0.9s;
+}
+
+.process-wrapper #progress-bar-container #line-progress {
+  content: '';
+  width: 3%;
+  height: 100%;
+  background: rgba(255, 115, 85, 0.8);
+  background: linear-gradient(to right, rgba(255, 115, 85, 0.8) 0%, #ff7355 100%);
+  position: absolute;
+  z-index: 2;
+  border-radius: 50px;
+  transition: all ease 0.9s;
+}
+
+.process-wrapper #progress-content-section {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  background: rgba(0, 8, 40, 0.7);
+  border-radius: 15px;
+  min-width: 1080px;
+  min-height: 450px;
+}
+
+.process-wrapper .section-content {
+  padding: 30px 40px;
+  display: none;
+  animation: FadeInUp 700ms ease 1;
+  animation-fill-mode: forwards;
+  transform: translateY(15px);
+  opacity: 0;
+}
+
+.process-wrapper .section-content.active {
+  display: block;
+}
+
+.process-wrapper .section-content h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.process-wrapper .section-content p {
+  font-size: 16px;
+  line-height: 1.8em;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 300;
+}
+
+.process-wrapper .section-content p span {
+  color: #ff7355;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+@keyframes FadeInUp {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -749,6 +926,14 @@ footer .footer-right a:hover, footer .footer-right a:focus {
   .port .row .description-wrap .inner {
     padding: 0;
   }
+  .process-wrapper {
+    margin: 0 0 0 100px;
+    max-width: 700px;
+  }
+  .process-wrapper #progress-content-section {
+    min-width: 700px;
+    min-height: 570px;
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -774,6 +959,7 @@ footer .footer-right a:hover, footer .footer-right a:focus {
     min-height: 100vh;
   }
   main section .section-wrapper {
+    transform: translatey(0);
     padding: 0;
   }
   main section .section-wrapper .big-faded {
@@ -843,6 +1029,14 @@ footer .footer-right a:hover, footer .footer-right a:focus {
   }
   .port .row .description-wrap .inner {
     padding: 0;
+  }
+  .process-wrapper {
+    margin: auto;
+    max-width: 700px;
+  }
+  .process-wrapper #progress-content-section {
+    min-width: 700px;
+    min-height: 570px;
   }
   footer .footer-link {
     display: none;
@@ -919,5 +1113,55 @@ footer .footer-right a:hover, footer .footer-right a:focus {
   }
   .port .row .description-wrap .inner {
     margin: 0 0 0 10px;
+  }
+  .process-wrapper {
+    margin: auto;
+    max-width: 300px;
+    overflow: hidden;
+  }
+  .process-wrapper #progress-bar-container ul {
+    margin-top: 11px;
+  }
+  .process-wrapper #progress-bar-container li:before {
+    width: 20px;
+    height: 20px;
+  }
+  .process-wrapper #progress-bar-container li:after {
+    width: 4px;
+    height: 4px;
+    border: solid 5px rgba(255, 255, 255, 0.9);
+    margin-top: 20px;
+  }
+  .process-wrapper #progress-bar-container li .step-inner {
+    display: none;
+  }
+  .process-wrapper #progress-bar-container #line {
+    height: 5px;
+    top: 75px;
+  }
+  .process-wrapper #progress-bar-container #line-progress {
+    width: 5%;
+  }
+  .process-wrapper #progress-content-section {
+    width: 100%;
+    height: 90%;
+    min-width: 300px;
+    min-height: 300px;
+  }
+  .process-wrapper .section-content {
+    padding: 7px 10px;
+    transform: translateY(0px);
+  }
+  .process-wrapper .section-content h2 {
+    font-size: 14px;
+  }
+  .process-wrapper .section-content p {
+    font-size: 12px;
+    line-height: 1.5em;
+    font-weight: 200;
+  }
+  .process-wrapper .section-content p span {
+    font-size: 14px;
+    font-weight: 300;
   }
 }
