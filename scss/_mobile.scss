@@ -340,6 +340,7 @@
     & .row-inner-v {
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: none;
+      border-radius: 0;
 
       h1 {
         font-size: 20px;

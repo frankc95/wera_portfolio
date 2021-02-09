@@ -1283,6 +1283,7 @@ footer .footer-right a:hover, footer .footer-right a:focus {
   .port .row-inner-v {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: none;
+    border-radius: 0;
   }
   .port .row-inner h1,
   .port .row-inner-v h1 {
