@@ -15,7 +15,7 @@
     &.active {
       & .l-info {
         transform: translateY(-260px);
-        & .l-date h4,
+        & .l-date h4:nth-child(2),
         & .l-issuer,
         & .l-credentials,
         & .l-txt {

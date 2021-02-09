@@ -416,7 +416,7 @@ nav .nav-item:nth-child(6) {
   transform: translateY(-260px);
 }
 
-.article-wrapper article.l-card.active .l-info .l-date h4,
+.article-wrapper article.l-card.active .l-info .l-date h4:nth-child(2),
 .article-wrapper article.l-card.active .l-info .l-issuer,
 .article-wrapper article.l-card.active .l-info .l-credentials,
 .article-wrapper article.l-card.active .l-info .l-txt {
@@ -1202,6 +1202,9 @@ footer .footer-right a:hover, footer .footer-right a:focus {
   }
   .article-wrapper article.l-card .l-img img {
     object-position: left;
+  }
+  .article-wrapper article.l-card .l-info {
+    padding: 10px;
   }
   .port {
     top: 0vh;
