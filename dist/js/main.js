@@ -47,5 +47,12 @@ function closeMenu() {
   menuBranding.classList.remove('show');
   menuNav.classList.remove('show');
 
-  showMenu = false;
+  showMenu = true;
 }
+
+// License active cards
+$('.l-card').click(function () {
+  $('.l-card').removeClass('active');
+  // $(".tab").addClass("active"); // instead of this do the below
+  $(this).addClass('active');
+});
