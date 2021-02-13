@@ -829,15 +829,10 @@ nav .nav-item:nth-child(6) {
   display: block;
   font-family: inherit;
   width: 100%;
-}
-
-.contact-container .form button input {
   color: #fff;
   outline: none;
   font-size: 16px;
   padding: 10px;
-  background: transparent;
-  border: none;
 }
 
 * {
