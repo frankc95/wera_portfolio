@@ -2,7 +2,8 @@
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
-  // overflow: hidden;
+  overflow: hidden;
+  height: 100%;
 
   & ul {
     display: grid;
@@ -187,18 +188,6 @@
   z-index: 5;
   top: 40px;
   right: 40px;
-}
-
-.arrow-right {
-  width: 50px;
-  height: 5px;
-  font-size: 50px;
-  position: fixed;
-  top: 50%;
-  right: 10vw;
-  color: #ffffff;
-  z-index: 5;
-  opacity: 1;
 }
 
 .item_open {

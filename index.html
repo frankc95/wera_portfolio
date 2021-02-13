@@ -433,10 +433,9 @@
           <!-- VOLUNTEER -->
           <section class="section volunteer card" data-aos="fade-up" id="m-volunteer">
             <div class="section-wrapper">
-              <!-- CARDS -->
               <div class="row">
                 <ul class="volunteer">
-                  <li data-aos="fade-up">
+                  <li>
                     <a href="#item04">
                       <div class="card-container">
                         <div class="img-container">
@@ -450,8 +449,8 @@
                       </div>
                     </a>
                   </li>
-        
-                  <li data-aos="fade-up">
+
+                  <li>
                     <a href="#item05">
                       <div class="card-container">
                         <div class="img-container">
@@ -465,15 +464,12 @@
                       </div>
                     </a>
                   </li>
+
                 </ul>
               </div>
-              <!-- / cards -->
-              <!-- <p class="secondary-title">  
-              </p> -->
-            </div>
+            </div>   
           </section>
-          <a href="#" class="closee"></a>
-          
+
           <!-- CARDS!!!!!!!!!!!!!!!!!!!!! -->
           <!-- Card 04 -->
           <div id="item04" class="port">
@@ -499,6 +495,7 @@
                   <div class="inner">
                     <h1><i class="fas fa-pen"></i> Description</h1>
                     <p>Working as a volunteer in charity nonprofit organization</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore reprehenderit, ipsam dolorem pariatur qui nobis nihil rerum asperiores fugiat, neque repellat odit? Dolore at veniam error minima deserunt aperiam cupiditate itaque, rerum voluptate, repellat magnam sequi corporis ratione explicabo consequuntur, corrupti in commodi unde necessitatibus sunt eligendi dolores? Magni, accusamus.</p>
                   </div>
                 </div>
               </div>
@@ -508,7 +505,7 @@
             </div>
           </div>
           <!-- / Card 04 -->
-    
+
           <!-- Card 05 -->
           <div id="item05" class="port">
             <div class="row-inner-v">
@@ -543,21 +540,68 @@
           </div>
           <!-- / Card 05 -->
           <!-- CARDS!!!!!!!!!!!!!!!!!!!!! -->
-            </div>   
-          </section>
+
+          
           <!-- CONTACT -->
           <section class="section contact" data-aos="fade-up" id="m-contact">
             <div class="section-wrapper">
-              <i class="fas fa-envelope icon"></i>
+              <div class="contact-container">
+                <div class="header">
+                  <h2>Contact me</h2>
+                </div>
+                <div>
+                  <form class="form" id="form" action="POST" data-netlify="true">
+                    
+                    <div class="form-control">
+                      <label>Your Name</label>
+                      <input name="name" type="text" placeholder="Your Name" id="username">
+                      <i class="fas fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small>Error message</small>
+                    </div>
+                    
+                    <div class="form-control">
+                      <label>Your Subject</label>
+                      <input name="subject" type="text" placeholder="Your Subject" id="subject">
+                      <i class="fas fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small>Error message</small>
+                    </div>
+                    
+                    <div class="form-control">
+                      <label>Your Email</label>
+                      <input name="email" type="email" placeholder="Your Email" id="email">
+                      <i class="fas fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small>Error message</small>
+                    </div>
+                    
+                    <div class="form-control">
+                      <label>Your Name</label>
+                      <textarea name="message" type="text" placeholder="Your Message" id="message" rows="7"></textarea>
+                      <i class="fas fa-check-circle"></i>
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small>Error message</small>
+                    </div>
+
+                    <div class="form-control">
+                      <div data-netlify-recaptcha="true"></div>
+                    </div>
+
+                    <button>Submit</button>
+                    
+                  </form>
+                </div>
+              </div>
             </div>  
           </section>
         </div>
 
         <!-- FOOTER -->
         <footer>
-          <div class="footer-link">
-            <a id="goDown"><i class="bounce"></i></a>
-          </div>
+          <a id="goDown">
+            <div class="footer-link"><i class="bounce"></i></div>
+          </a>
           <div class="footer-right">
             <ul class="social">
               <li><a href="https://www.linkedin.com/in/weronika-%C5%82adog%C3%B3rska-baaa39b5/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></li>
@@ -579,6 +623,7 @@
     <script src="/dist/js/main.js"></script>
     <script src="/dist/js/cards.js"></script>
     <script src="/dist/js/experience.js"></script>
+    <script src="/dist/js/contact.js"></script>
     <script>
       if (screen && screen.width > 768) {
       document.write('<script src="dist/js/fullpage.js"><\/script>');

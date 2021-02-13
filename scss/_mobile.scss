@@ -289,6 +289,9 @@
 
   main {
     section {
+      .volunteer {
+        padding-top: 50px;
+      }
       .section-wrapper {
         .icon {
           font-size: 40vw;
@@ -335,12 +338,19 @@
     width: 100vw;
     min-height: 100vh;
     border-radius: 0;
+    height: 100%;
+    overflow: auto;
+
+    & .row-inner-v {
+      padding-top: 50px;
+    }
 
     & .row-inner,
     & .row-inner-v {
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: none;
       border-radius: 0;
+      overflow: auto;
 
       h1 {
         font-size: 20px;
@@ -392,7 +402,7 @@
 
         &-wrap {
           grid-gap: 5px;
-          padding: 0 10px;
+          padding: 10px;
 
           .inner {
             margin: 0 0 0 10px;
@@ -400,6 +410,13 @@
         }
       }
     }
+  }
+
+  .closee {
+    height: 20px;
+    width: 20px;
+    top: 20px;
+    right: 20px;
   }
 
   .process-wrapper {
