@@ -742,6 +742,10 @@ nav .nav-item:nth-child(6) {
   overflow: hidden;
 }
 
+.contact-container .hidden {
+  display: none;
+}
+
 .contact-container .header {
   background: #f7f7f7;
   border-bottom: 1px solid #f7f7f7;
@@ -952,6 +956,9 @@ main section .section-wrapper {
   align-items: center;
   flex-direction: column;
   transform: translatey(-10%);
+}
+
+main section .section-wrapper .contact {
   overflow: hidden;
 }
 

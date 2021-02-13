@@ -4,10 +4,6 @@ const subject = document.getElementById('subject');
 const email = document.getElementById('email');
 const message = document.getElementById('message');
 
-function validation() {
-  alert('working');
-}
-
 function checkInputs() {
   //get the values from the inputs
 

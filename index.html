@@ -550,13 +550,11 @@
                   <h2>Contact me</h2>
                 </div>
                 <div>
-                  <form class="form" name="contact" id="form" method="POST" data-netlify="true" onSubmit="return checkInputs()" action="/#contact">
-                    <div hidden aria-hidden="true">
-                      <label>
-                        Don’t fill this out if you're human: 
-                        <input name="bot-field" />
-                      </label>
-                    </div>
+                  <form class="form" name="contact" id="form" method="POST" data-netlify="true" onSubmit="return checkInputs()" action="/#contact" netlify-honeypot="bot-field">
+                    
+                    <p class="hidden">
+                      <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                    </p>
                     
                     <div class="form-control">
                       <label>Your Name</label>

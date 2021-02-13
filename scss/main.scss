@@ -137,7 +137,10 @@ main {
       align-items: center;
       flex-direction: column;
       transform: translatey(-10%);
-      overflow: hidden;
+
+      & .contact {
+        overflow: hidden;
+      }
 
       // .icon {
       //   display: inline-block;
