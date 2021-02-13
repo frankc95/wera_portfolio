@@ -947,6 +947,10 @@ main .img-cover:after {
   z-index: -2;
 }
 
+main section .contact {
+  overflow: hidden;
+}
+
 main section .section-wrapper {
   width: 100%;
   margin: 0 auto;
@@ -955,11 +959,7 @@ main section .section-wrapper {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transform: translatey(-10%);
-}
-
-main section .section-wrapper .contact {
-  overflow: hidden;
+  transform: translatey(0);
 }
 
 main section .section-wrapper .icon {
@@ -1344,6 +1344,9 @@ footer .footer-right a:hover, footer .footer-right a:focus {
     display: none;
   }
   main section .volunteer {
+    padding-top: 50px;
+  }
+  main section.contact {
     padding-top: 50px;
   }
   main section .section-wrapper .icon {

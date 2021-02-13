@@ -128,6 +128,9 @@ main {
   }
 
   section {
+    .contact {
+      overflow: hidden;
+    }
     .section-wrapper {
       width: 100%;
       margin: 0 auto;
@@ -136,11 +139,7 @@ main {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      transform: translatey(-10%);
-
-      & .contact {
-        overflow: hidden;
-      }
+      transform: translatey(0);
 
       // .icon {
       //   display: inline-block;
