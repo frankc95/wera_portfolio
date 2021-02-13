@@ -4,11 +4,9 @@ const subject = document.getElementById('subject');
 const email = document.getElementById('email');
 const message = document.getElementById('message');
 
-// form.addEventListener('submit', (e) => {
-//   e.preventDefault();
-
-//   checkInputs();
-// });
+function validation() {
+  alert('working');
+}
 
 function checkInputs() {
   //get the values from the inputs
@@ -22,6 +20,7 @@ function checkInputs() {
     // show error
     // add error class
     setErrorFor(username, 'This field cannot be empty');
+    return false;
   } else {
     // add success class
     setSuccessFor(username);
@@ -29,23 +28,28 @@ function checkInputs() {
 
   if (subjectValue === '') {
     setErrorFor(subject, 'This field cannot be empty');
+    return false;
   } else {
     setSuccessFor(subject);
   }
 
   if (emailValue === '') {
     setErrorFor(email, 'This field cannot be empty');
+    return false;
   } else if (!isEmail(emailValue)) {
     setErrorFor(email, 'Email format is not valid');
+    return false;
   } else {
     setSuccessFor(email);
   }
 
   if (messageValue === '') {
     setErrorFor(message, 'This field cannot be empty');
+    return false;
   } else {
     setSuccessFor(message);
   }
+  return true;
 }
 
 function setErrorFor(input, message) {

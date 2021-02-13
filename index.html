@@ -551,10 +551,16 @@
                 </div>
                 <div>
                   <form class="form" id="form" method="POST" data-netlify="true" onSubmit="return checkInputs()">
+                    <div hidden aria-hidden="true">
+                      <label>
+                        Don’t fill this out if you're human: 
+                        <input name="bot-field" />
+                      </label>
+                    </div>
                     
                     <div class="form-control">
                       <label>Your Name</label>
-                      <input name="name" type="text" placeholder="Your Name" id="username">
+                      <input name="name" type="text" placeholder="Your Name" id="username" required>
                       <i class="fas fa-check-circle"></i>
                       <i class="fas fa-exclamation-circle"></i>
                       <small>Error message</small>
@@ -562,7 +568,7 @@
                     
                     <div class="form-control">
                       <label>Your Subject</label>
-                      <input name="subject" type="text" placeholder="Your Subject" id="subject">
+                      <input name="subject" type="text" placeholder="Your Subject" id="subject" required>
                       <i class="fas fa-check-circle"></i>
                       <i class="fas fa-exclamation-circle"></i>
                       <small>Error message</small>
@@ -570,7 +576,7 @@
                     
                     <div class="form-control">
                       <label>Your Email</label>
-                      <input name="email" type="email" placeholder="Your Email" id="email">
+                      <input name="email" type="email" placeholder="Your Email" id="email" required>
                       <i class="fas fa-check-circle"></i>
                       <i class="fas fa-exclamation-circle"></i>
                       <small>Error message</small>
@@ -578,7 +584,7 @@
                     
                     <div class="form-control">
                       <label>Your Name</label>
-                      <textarea name="message" type="text" placeholder="Your Message" id="message" rows="7"></textarea>
+                      <textarea name="message" type="text" placeholder="Your Message" id="message" rows="7" required></textarea>
                       <i class="fas fa-check-circle"></i>
                       <i class="fas fa-exclamation-circle"></i>
                       <small>Error message</small>
@@ -588,7 +594,7 @@
                       <div data-netlify-recaptcha="true"></div>
                     </div>
 
-                    <button type="submit" name="submitButton" value="Submit">Submit</button>
+                    <button type="submit">Submit</button>
                     
                   </form>
                 </div>
