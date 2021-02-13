@@ -4,11 +4,11 @@ const subject = document.getElementById('subject');
 const email = document.getElementById('email');
 const message = document.getElementById('message');
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+// form.addEventListener('submit', (e) => {
+//   e.preventDefault();
 
-  checkInputs();
-});
+//   checkInputs();
+// });
 
 function checkInputs() {
   //get the values from the inputs
