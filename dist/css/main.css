@@ -826,12 +826,18 @@ nav .nav-item:nth-child(6) {
   background: orange;
   border: 2px solid #8e44ad;
   border-radius: 5px;
-  color: #fff;
   display: block;
   font-family: inherit;
+  width: 100%;
+}
+
+.contact-container .form button input {
+  color: #fff;
+  outline: none;
   font-size: 16px;
   padding: 10px;
-  width: 100%;
+  background: transparent;
+  border: none;
 }
 
 * {
