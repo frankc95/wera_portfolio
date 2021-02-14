@@ -546,42 +546,37 @@
           <section class="section contact" data-aos="fade-up" id="m-contact">
             <div class="section-wrapper">
               <div class="contact-container">
-                <div class="header">
-                  <h2>Contact me</h2>
-                </div>
                 <div>
-                  <form class="form" name="contact" id="form" method="POST" data-netlify="true" onSubmit="return checkInputs()" action="/#contact" netlify-honeypot="bot-field">
+                  <form class="form" name="contactForm" id="form" method="POST" data-netlify="true" onSubmit="return checkInputs()" action="/#contact" netlify-honeypot="bot-field">
                     
                     <p class="hidden">
                       <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
                     </p>
                     
-                    <div class="form-control">
-                      <label>Your Name</label>
-                      <input name="name" type="text" placeholder="Your Name" id="username">
-                      <i class="fas fa-check-circle"></i>
-                      <i class="fas fa-exclamation-circle"></i>
-                      <small>Error message</small>
+                    <div class="form-wrapper">
+                      <div class="form-control">
+                        <input name="name" type="text" placeholder="Your Name" id="username">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                      </div>
+                      
+                      <div class="form-control">
+                        <input name="subject" type="text" placeholder="Your Subject" id="subject">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                      </div>
+                      
+                      <div class="form-control">
+                        <input name="email" type="email" placeholder="Your Email" id="email">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                      </div>
                     </div>
                     
                     <div class="form-control">
-                      <label>Your Subject</label>
-                      <input name="subject" type="text" placeholder="Your Subject" id="subject">
-                      <i class="fas fa-check-circle"></i>
-                      <i class="fas fa-exclamation-circle"></i>
-                      <small>Error message</small>
-                    </div>
-                    
-                    <div class="form-control">
-                      <label>Your Email</label>
-                      <input name="email" type="email" placeholder="Your Email" id="email">
-                      <i class="fas fa-check-circle"></i>
-                      <i class="fas fa-exclamation-circle"></i>
-                      <small>Error message</small>
-                    </div>
-                    
-                    <div class="form-control">
-                      <label>Your Name</label>
                       <textarea name="message" type="text" placeholder="Your Message" id="message" rows="7"></textarea>
                       <i class="fas fa-check-circle"></i>
                       <i class="fas fa-exclamation-circle"></i>
