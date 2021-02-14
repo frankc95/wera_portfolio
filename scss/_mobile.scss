@@ -289,7 +289,6 @@
 
   main {
     section {
-      width: 100vw;
       .volunteer {
         padding-top: 50px;
       }
@@ -314,6 +313,7 @@
           }
         }
         .row {
+          // width: 100%;
           max-width: 300px;
         }
       }
@@ -321,10 +321,10 @@
   }
 
   .article-wrapper {
+    max-width: 80%;
     padding-top: 100px;
     grid-template-columns: repeat(1, 1fr);
     article.l-card {
-      width: 300px;
       .l-img {
         & img {
           object-position: left;
