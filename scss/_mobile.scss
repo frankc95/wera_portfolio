@@ -487,4 +487,18 @@
       }
     }
   }
+
+  .contact-container {
+    width: 90%;
+  
+    .form-wrapper{
+      display: block;
+    }
+
+    .form{
+      & button{
+        width: 100%;
+      }
+    }
+  }
 }
