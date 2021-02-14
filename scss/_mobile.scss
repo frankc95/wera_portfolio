@@ -429,6 +429,7 @@
     overflow: hidden;
 
     #progress-bar-container {
+      margin-top: 0;
       & ul {
         margin-top: 11px;
       }
@@ -490,6 +491,7 @@
 
   .contact-container {
     width: 90%;
+    margin-bottom: 100px;
   
     .form-wrapper{
       display: block;
