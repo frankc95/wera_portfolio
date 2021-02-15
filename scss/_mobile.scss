@@ -2,15 +2,70 @@
 @include mediaXl {
   main {
     section {
+      max-width: 1000px;
       .icon {
         transform: translate(-50%, -50%);
       }
       .section-wrapper {
         .row {
-          max-width: 750px;
           & ul {
             grid-template-columns: repeat(3, 1fr);
           }
+          & .volunteer {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+      }
+    }
+  }
+  .port {
+    top: 15vh;
+    left: 10vw;
+    width: 80vw;
+    height: 70vh;
+  }
+  .article-wrapper {
+    grid-gap: 5px;
+    article.l-card {
+      .l-img {
+        & img {
+          object-fit: cover;
+          object-position: left;
+        }
+      }
+      .l-info {
+        padding: 5px 10px;
+        & .l-date,
+        & .l-issuer,
+        & .l-credentials {
+          font-size: 0.8rem;
+        }
+        .l-credentials {
+          margin-bottom: 14px;
+          padding-bottom: 14px;
+        }
+        .l-txt {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+  .port {
+    & .row-inner-v {
+      & h1 {
+        font-weight: 300;
+        font-size: 1.5em;
+      }
+      p {
+        font-weight: 200;
+        font-size: 1em;
+      }
+      & .description {
+        display: flex;
+        align-items: center;
+        order: 2;
+        &-wrap {
+          padding: 15px;
         }
       }
     }
@@ -492,13 +547,13 @@
   .contact-container {
     width: 90%;
     margin-bottom: 100px;
-  
-    .form-wrapper{
+
+    .form-wrapper {
       display: block;
     }
 
-    .form{
-      & button{
+    .form {
+      & button {
         width: 100%;
       }
     }

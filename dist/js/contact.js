@@ -4,6 +4,16 @@ const subject = document.getElementById('subject');
 const email = document.getElementById('email');
 const message = document.getElementById('message');
 
+form.addEventListener('submit', (e) => {
+  if (checkInputs()) {
+    const textContainer = document.getElementById('confirm');
+    const text = document.createElement('span');
+    text.className = 'white-text';
+    text.appendChild(document.createTextNode(`Your message has been sent`));
+    textContainer.appendChild(text);
+  }
+});
+
 function checkInputs() {
   //get the values from the inputs
 

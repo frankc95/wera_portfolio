@@ -9,7 +9,7 @@
     height: 300px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 4px ​4px 15px rgba(0, 0, 0, 0.3);
     overflow: hidden;
 
     &.active {
@@ -27,7 +27,6 @@
     .l-img {
       width: auto;
       height: 210px;
-      border-radius: 3px;
 
       & img {
         object-fit: cover;
@@ -52,7 +51,7 @@
         color: #152536;
         font-family: 'Grotesque Black', sans-serif;
         // font-family: 'Noto Sans JP', sans-serif;
-        font-size: .8rem;
+        font-size: 0.8rem;
         text-transform: uppercase;
         text-shadow: 0 0 0px #32577f;
       }

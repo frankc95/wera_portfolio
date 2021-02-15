@@ -1,3 +1,4 @@
+@charset "UTF-8";
 nav.side-nav {
   display: block;
   position: fixed;
@@ -397,7 +398,7 @@ nav .nav-item:nth-child(6) {
   height: 300px;
   background: white;
   border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px ​4px 15px rgba(0, 0, 0, 0.3);
   overflow: hidden;
 }
 
@@ -415,7 +416,6 @@ nav .nav-item:nth-child(6) {
 .article-wrapper article.l-card .l-img {
   width: auto;
   height: 210px;
-  border-radius: 3px;
 }
 
 .article-wrapper article.l-card .l-img img {
@@ -440,7 +440,7 @@ nav .nav-item:nth-child(6) {
   margin: 10px 0;
   color: #152536;
   font-family: 'Grotesque Black', sans-serif;
-  font-size: .8rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   text-shadow: 0 0 0px #32577f;
 }
@@ -960,7 +960,7 @@ main .img-cover:after {
 }
 
 main section {
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -1158,14 +1158,61 @@ footer .footer-right a:hover, footer .footer-right a:focus {
 }
 
 @media screen and (min-width: 1171px) and (max-width: 1500px) {
+  main section {
+    max-width: 1000px;
+  }
   main section .icon {
     transform: translate(-50%, -50%);
   }
-  main section .section-wrapper .row {
-    max-width: 750px;
-  }
   main section .section-wrapper .row ul {
     grid-template-columns: repeat(3, 1fr);
+  }
+  main section .section-wrapper .row .volunteer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .port {
+    top: 15vh;
+    left: 10vw;
+    width: 80vw;
+    height: 70vh;
+  }
+  .article-wrapper {
+    grid-gap: 5px;
+  }
+  .article-wrapper article.l-card .l-img img {
+    object-fit: cover;
+    object-position: left;
+  }
+  .article-wrapper article.l-card .l-info {
+    padding: 5px 10px;
+  }
+  .article-wrapper article.l-card .l-info .l-date,
+  .article-wrapper article.l-card .l-info .l-issuer,
+  .article-wrapper article.l-card .l-info .l-credentials {
+    font-size: 0.8rem;
+  }
+  .article-wrapper article.l-card .l-info .l-credentials {
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+  }
+  .article-wrapper article.l-card .l-info .l-txt {
+    font-size: 0.8rem;
+  }
+  .port .row-inner-v h1 {
+    font-weight: 300;
+    font-size: 1.5em;
+  }
+  .port .row-inner-v p {
+    font-weight: 200;
+    font-size: 1em;
+  }
+  .port .row-inner-v .description {
+    display: flex;
+    align-items: center;
+    order: 2;
+  }
+  .port .row-inner-v .description-wrap {
+    padding: 15px;
   }
 }
 
