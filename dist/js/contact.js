@@ -7,13 +7,11 @@ const message = document.getElementById('message');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   if (checkInputs()) {
-    setTimeout(function () {
-      const textContainer = document.getElementById('confirm');
-      const text = document.createElement('span');
-      text.className = 'white-text';
-      text.appendChild(document.createTextNode(`Your message has been sent`));
-      textContainer.appendChild(text);
-    }, 1000);
+    const textContainer = document.getElementById('confirm');
+    const text = document.createElement('span');
+    text.className = 'white-text';
+    text.appendChild(document.createTextNode(`Your message has been sent`));
+    textContainer.appendChild(text);
   }
 });
 
