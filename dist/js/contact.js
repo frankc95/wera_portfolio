@@ -5,9 +5,6 @@ const email = document.getElementById('email');
 const message = document.getElementById('message');
 
 form.addEventListener('submit', (e) => {
-  setTimeout(function () {
-    e.preventDefault();
-  }, 1000);
   if (checkInputs()) {
     const textContainer = document.getElementById('confirm');
     const text = document.createElement('span');
